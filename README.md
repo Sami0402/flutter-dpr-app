@@ -1,17 +1,89 @@
-# dpr_app
+# DPR Mobile App (Flutter)
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+This project is a simple Flutter mobile application developed as part of the Mobile App Developer Intern selection task. The app allows users to log in, view projects, and submit a Daily Progress Report (DPR).
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+* Login Screen with mock authentication
+* Project List Screen with static project data
+* DPR Form Screen for submitting daily progress
+* Image upload (1–3 images)
+* Input validation
+* Clean UI using Flutter widgets
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Flutter
+* Dart
+* intl package (for date formatting)
+* image_picker package (for photo upload)
+
+## Project Structure
+
+lib/
+screens/
+login_screen.dart
+project_list_screen.dart
+dpr_form_screen.dart
+
+models/
+project_model.dart
+
+data/
+project_data.dart
+
+widgets/
+project_card.dart
+
+services/
+auth_service.dart
+
+## Mock Login Credentials
+
+Email: [test@test.com](mailto:test@test.com)
+Password: 123456
+
+## How to Run the Project
+
+1. Ensure Flutter is installed:
+   ```bash
+    flutter doctor
+   ```
+
+2. Clone the repository:
+   ```bash
+    git clone https://github.com/Sami0402/Memorica.git
+   ```
+
+3. Install dependencies:
+   ```bash
+    flutter pub get
+   ```
+
+4. Run the app:
+   ```bash
+    flutter run
+   ```
+
+## Implemented Features
+
+* Login authentication (mock)
+* Project list display
+* DPR submission form
+* Date picker
+* Weather dropdown
+* Image upload
+* Form validation
+
+## Known Limitations
+
+* Authentication is mocked
+* DPR data is not stored permanently
+* No backend integration
+
+## Author
+
+Sami Khan
+
