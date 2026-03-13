@@ -1,4 +1,5 @@
 import 'package:dpr_app/services/auth_service.dart';
+import 'package:dpr_app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -14,7 +15,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final String emailValid =
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+";
-
 
   void formValidation() {
     final email = emailController.text.trim();
@@ -46,8 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // TITLE
                 Text(
-                  "Welcome back!",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                  "Welcome Back",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
                 ),
 
                 SizedBox(height: 50),
@@ -66,9 +66,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(28),
                     ),
-                    prefixIcon: Icon(Icons.person_rounded),
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Icon(Icons.person_rounded, color: Colors.black),
+                    ),
                     hintText: "Email",
                   ),
                 ),
@@ -88,9 +91,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(28),
                     ),
-                    prefixIcon: Icon(Icons.lock_rounded),
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Icon(Icons.lock_rounded, color: Colors.black),
+                    ),
                     hintText: "Password",
                   ),
                 ),
@@ -98,26 +104,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 50),
 
                 // LOGIN BUTTON
-                SizedBox(
-                  height: MediaQuery.sizeOf(context).width * 0.13,
-                  width: MediaQuery.sizeOf(context).width * 0.90,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                    onPressed: formValidation,
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
+                CustomButton(text: 'Login', onPressed: formValidation, textSize: 20),
+                
               ],
             ),
           ),
