@@ -22,23 +22,35 @@ This project is a simple Flutter mobile application developed as part of the Mob
 
 ## Project Structure
 
+```
 lib/
-screens/
-login_screen.dart
-project_list_screen.dart
-dpr_form_screen.dart
-
-models/
-project_model.dart
-
-data/
-project_data.dart
-
-widgets/
-project_card.dart
-
-services/
-auth_service.dart
+│
+├── main.dart
+│
+├── screens/
+│   ├── login_screen.dart
+│   ├── project_list_screen.dart
+│   └── dpr_form_screen.dart
+│
+├── models/
+│   └── project_model.dart
+│
+├── data/
+│   └── project_data.dart
+│
+├── widgets/
+│   ├── project_card.dart
+    ├── custom_button.dart
+│   ├── project_dropdown.dart
+│   ├── date_picker_field.dart
+│   ├── weather_dropdown.dart
+│   ├── description_field.dart
+│   ├── worker_count_field.dart
+│   └── image_picker_section.dart
+│
+└── services/
+    └── auth_service.dart
+```
 
 ## Mock Login Credentials
 
